@@ -125,6 +125,7 @@ action :create do
       default_logger true
       run_template_name 'sidekiq'
       log_template_name 'sidekiq'
+      sv_timeout 30
       cookbook 'sidekiq'
       owner new_resource.owner if new_resource.owner
       group new_resource.group if new_resource.group
